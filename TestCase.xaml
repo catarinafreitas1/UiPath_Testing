@@ -1,0 +1,213 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TestCase" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1688,2008" sap2010:WorkflowViewState.IdRef="TestCase_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Testing</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="TestCase" sap:VirtualizedContainerService.HintSize="1170,1943" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strUserName" />
+      <Variable x:TypeArguments="x:String" Name="strPassword" />
+      <Variable x:TypeArguments="x:Boolean" Name="boolVerify" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="1108,243" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[strUserName]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">catarinafreitas</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[strPassword]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">TESTE123!</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+      </ui:MultipleAssign>
+    </Sequence>
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="1108,224" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Login_UiBank.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Login_UiBank.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_UserName">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strUserName" />
+          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_Password">
+            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strPassword" />
+          </InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="1108,1285" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="1046,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+      <uix:NCheckState DisplayName="Check App State 'login failed'" sap:VirtualizedContainerService.HintSize="1046,414" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V3">
+        <uix:NCheckState.IfExists>
+          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,197" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[boolVerify]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </uix:NCheckState.IfExists>
+        <uix:NCheckState.IfNotExists>
+          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,197" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[boolVerify]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </uix:NCheckState.IfNotExists>
+        <uix:NCheckState.Target>
+          <uix:TargetAnchorable BrowserURL="https://uibank.uipath.com/" DesignTimeRectangle="795, 551, 314, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'login failed'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;app-welcome-page&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div' isleaf='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' login failed as the email has not been verified ' check:innerText='login failed as the email has not been verified' /&gt;" Guid="d83c1c45-683e-4e55-85f0-c0bfc1f85264" ImageBase64="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" InformativeScreenshot="fbb6719c51e9c8176fb026b6dca28379.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='UiBank' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+        </uix:NCheckState.Target>
+      </uix:NCheckState>
+      <uta:VerifyExpressionWithOperator KeepScreenshots="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="1046,590" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_1" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False">
+        <uta:VerifyExpressionWithOperator.AlternativeVerificationTitle>
+          <InArgument x:TypeArguments="x:String" />
+        </uta:VerifyExpressionWithOperator.AlternativeVerificationTitle>
+        <uta:VerifyExpressionWithOperator.FirstExpression>
+          <InArgument x:TypeArguments="x:Object">[boolVerify]</InArgument>
+        </uta:VerifyExpressionWithOperator.FirstExpression>
+        <uta:VerifyExpressionWithOperator.OutputMessageFormat>
+          <InArgument x:TypeArguments="x:String" />
+        </uta:VerifyExpressionWithOperator.OutputMessageFormat>
+        <uta:VerifyExpressionWithOperator.Result>
+          <OutArgument x:TypeArguments="x:Boolean" />
+        </uta:VerifyExpressionWithOperator.Result>
+        <uta:VerifyExpressionWithOperator.SecondExpression>
+          <InArgument x:TypeArguments="x:Object">[True]</InArgument>
+        </uta:VerifyExpressionWithOperator.SecondExpression>
+      </uta:VerifyExpressionWithOperator>
+    </Sequence>
+  </Sequence>
+</Activity>

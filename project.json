@@ -41,7 +41,17 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "e1a07f26-5e2c-4cf4-8b5b-687d57960dd8",
+        "executionTemplatePath": "Test With Timeout (UiPath.Testing.Activities);UiPath.Testing.Activities;Test With Timeout.xaml",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "PackageFileTemplate",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCase.xaml"
+      }
+    ],
     "modernBehavior": true
   },
   "expressionLanguage": "VisualBasic",

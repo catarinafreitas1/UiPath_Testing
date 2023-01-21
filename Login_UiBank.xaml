@@ -1,4 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Login_UiBank" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1688,1181" sap2010:WorkflowViewState.IdRef="Login_UiBank_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Login_UiBank" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_UserName" Type="InArgument(x:String)" />
+    <x:Property Name="in_Password" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1688,1181</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Login_UiBank_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -32,10 +41,11 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Security</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -68,6 +78,15 @@
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Login_UiBank" sap:VirtualizedContainerService.HintSize="496,1116" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -76,7 +95,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: UiBank" sap:VirtualizedContainerService.HintSize="434,1005" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="325dad49-78de-49c9-a658-286dc0e83ead" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: UiBank" sap:VirtualizedContainerService.HintSize="434,1005" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="325dad49-78de-49c9-a658-286dc0e83ead" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -88,7 +107,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="325dad49-78de-49c9-a658-286dc0e83ead" Text="catarinafreitas" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="325dad49-78de-49c9-a658-286dc0e83ead" Text="[in_UserName]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://uibank.uipath.com/" DesignTimeRectangle="795, 366, 314, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT username'" FullSelectorArgument="&lt;webctrl id='username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='username' tag='INPUT' type='text' aaname='Username' /&gt;" Guid="aaf178e3-4755-460d-8717-c78fbee93da9" ImageBase64="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" InformativeScreenshot="93a5be29f169151a4f728b26855f4978.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='UiBank' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -99,7 +118,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="325dad49-78de-49c9-a658-286dc0e83ead" Text="TESTE123!" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="325dad49-78de-49c9-a658-286dc0e83ead" Text="[in_Password]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://uibank.uipath.com/" DesignTimeRectangle="795, 452, 314, 38" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'TESTE123!'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' aaname='Password' /&gt;" Guid="b7986135-a53a-45ac-b0d8-11385472cd77" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAT4AAAAqCAYAAAAqCDcJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVHhe7dcxSxthGMDx91MYp0I/QIeCDkL7Cbp0LO0kjn6B4hKwoEjARepSuqVQaLZmy9AhuAgWkaaQisIphhsk6WJcpE/fJ95dLvZaOxyBN8//gd/yvnmOm/5cnDAMwxgbwscwjLmZCN/V8FpOz3py2DmWr99+AEDQtGXaNG1bfrLw6YX+6DweSDy4kfjnLwAIm2+ZNk3blo9fFj6t4ih6RcsAEDBtmzYunSx8WkS+9ADMJN82bVw6Wfj0/3DhAgDMAG1cOoQPgAmED4A5hA+AOYQPgDmED4A5hA+AOYQPgDmED4A5hA+AOYQPgDmED4A5hA+AOSWHbyjdqC/di4K7C3/u76K7516kO9Hwj/P4MnlefOfc++vOFN8BQJhKDF9P3r96KM45b0let8YRib7U5ElFz53MvajLfm7vqL4iD0Y7ThbW9sZRig+k+nT+9nmVl7J79B87U3wHAOEqL3zf6/IsicfISlO6yV1zLXfuHku1ne71ZPd5/m5VPkTJXetN7tzJo42D+3em9g4AQlbiF5//OlocR2Jhq5PddT+uylwakEouLF5rYynbcYs70k7O45OmLCdfaM7Ny/Kn/v07U3wHAOEqMXzeyZ5sr9dks97JvrRuDaVd35Hq+jtpdPPnqi/NtzWpbjWknYuRivYbsumft/25N3H+r53pvQOAUJUbPgAIAOEDYA7hA2AO4QNgDuEDYA7hA2AO4QNgDuEDYA7hA2AO4QNgDuEDYA7hA2BOYfgOO8cSD24KFwAgaL5t2rh0svCdnvXkPB4ULwFAwLRt2rh0svBdDa9HRRzFjy8/ALPAt0ybpm3TxqWThU9HL7SK+iP9PwwAIdOWadPy0dOZCB/DMIyFIXwMwxgbkd+hw84ewTTwfwAAAABJRU5ErkJggg==" InformativeScreenshot="bed54a06016dbd9355b313f020f10d51.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='UiBank' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
